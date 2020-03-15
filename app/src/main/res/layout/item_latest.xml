@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lst_const"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp">
+
+        <ImageView
+            android:id="@+id/lst_image"
+            android:layout_width="100pt"
+            android:layout_height="100pt"
+            android:src="@drawable/lv_bag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lst_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Hyde Park N41015"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lst_image" />
+
+        <TextView
+            android:id="@+id/lst_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text="LOUIS VUITTON"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lst_name" />
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:numStars="5"
+            android:isIndicator="false"
+            android:rating="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lst_price"
+            app:layout_constraintTop_toBottomOf="@id/lst_type"/>
+
+        <View
+            android:id="@+id/txt_viewall"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="7dp"
+            android:background="#9F9E9E"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lst_type" />
+
+        <View
+            android:id="@+id/vertical_wall"
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="150dp"
+            android:background="#9F9E9E"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_viewall" />
+
+        <TextView
+            android:id="@+id/lst_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:text="999,99999 KS"
+            android:textColor="#CA6A50"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/vertical_wall"
+            app:layout_constraintTop_toBottomOf="@id/txt_viewall" />
+
+        <LinearLayout
+            android:id="@+id/lst_linear"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/vertical_wall"
+            app:layout_constraintTop_toBottomOf="@id/lst_price">
+
+        <TextView
+            android:id="@+id/lst_discount"
+            android:text="@string/p"
+            android:background="@drawable/st"
+            android:layout_marginBottom="10dp"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
